@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		263C82782050FF91007718FC /* TweetDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263C82772050FF91007718FC /* TweetDetailsViewController.swift */; };
+		26525C952051211100FE5E20 /* RetweetDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26525C942051211100FE5E20 /* RetweetDetailCell.swift */; };
+		26525C972051215600FE5E20 /* ReactionButtonsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26525C962051215600FE5E20 /* ReactionButtonsCell.swift */; };
+		26525C992051219300FE5E20 /* CountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26525C982051219300FE5E20 /* CountCell.swift */; };
+		26525C9B205121AC00FE5E20 /* ReplyDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26525C9A205121AC00FE5E20 /* ReplyDetailCell.swift */; };
+		26525C9D2053A24000FE5E20 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26525C9C2053A24000FE5E20 /* ProfileViewController.swift */; };
+		26525CA12056240200FE5E20 /* UserTweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26525CA02056240200FE5E20 /* UserTweetCell.swift */; };
+		26525CA320563CE000FE5E20 /* UserRetweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26525CA220563CE000FE5E20 /* UserRetweetCell.swift */; };
+		269EB7A920510D9D0021CF76 /* TweetDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269EB7A820510D9D0021CF76 /* TweetDetailCell.swift */; };
+		26E5779A204A7A3A0067B884 /* RetweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E57799204A7A3A0067B884 /* RetweetCell.swift */; };
 		547221C96829E6F537FCE2FE /* Pods_twitter_alamofire_demoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FCA05DC47A45B9943F23F5F /* Pods_twitter_alamofire_demoUITests.framework */; };
 		6C028F67F4B75B9CE911AB20 /* Pods_twitter_alamofire_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 001F2EB27736B82E6AF0082B /* Pods_twitter_alamofire_demo.framework */; };
 		ED1AFD311E942B2500FD4B90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1AFD301E942B2500FD4B90 /* AppDelegate.swift */; };
@@ -43,6 +53,16 @@
 
 /* Begin PBXFileReference section */
 		001F2EB27736B82E6AF0082B /* Pods_twitter_alamofire_demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_twitter_alamofire_demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		263C82772050FF91007718FC /* TweetDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetDetailsViewController.swift; sourceTree = "<group>"; };
+		26525C942051211100FE5E20 /* RetweetDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetweetDetailCell.swift; sourceTree = "<group>"; };
+		26525C962051215600FE5E20 /* ReactionButtonsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionButtonsCell.swift; sourceTree = "<group>"; };
+		26525C982051219300FE5E20 /* CountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountCell.swift; sourceTree = "<group>"; };
+		26525C9A205121AC00FE5E20 /* ReplyDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplyDetailCell.swift; sourceTree = "<group>"; };
+		26525C9C2053A24000FE5E20 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		26525CA02056240200FE5E20 /* UserTweetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTweetCell.swift; sourceTree = "<group>"; };
+		26525CA220563CE000FE5E20 /* UserRetweetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRetweetCell.swift; sourceTree = "<group>"; };
+		269EB7A820510D9D0021CF76 /* TweetDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetDetailCell.swift; sourceTree = "<group>"; };
+		26E57799204A7A3A0067B884 /* RetweetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetweetCell.swift; sourceTree = "<group>"; };
 		3FCA05DC47A45B9943F23F5F /* Pods_twitter_alamofire_demoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_twitter_alamofire_demoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		434659329CA4ED45495F750D /* Pods-twitter_alamofire_demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-twitter_alamofire_demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-twitter_alamofire_demo/Pods-twitter_alamofire_demo.debug.xcconfig"; sourceTree = "<group>"; };
 		4DFA54CBFE40EC0C9E20906F /* Pods-twitter_alamofire_demoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-twitter_alamofire_demoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-twitter_alamofire_demoTests/Pods-twitter_alamofire_demoTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -193,7 +213,9 @@
 			isa = PBXGroup;
 			children = (
 				ED1AFD601E94496E00FD4B90 /* LoginViewController.swift */,
+				263C82772050FF91007718FC /* TweetDetailsViewController.swift */,
 				ED1D234B1EF6E42900C51ACC /* TimelineViewController.swift */,
+				26525C9C2053A24000FE5E20 /* ProfileViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -202,6 +224,14 @@
 			isa = PBXGroup;
 			children = (
 				ED1D234D1EF71C4B00C51ACC /* TweetCell.swift */,
+				26E57799204A7A3A0067B884 /* RetweetCell.swift */,
+				269EB7A820510D9D0021CF76 /* TweetDetailCell.swift */,
+				26525C942051211100FE5E20 /* RetweetDetailCell.swift */,
+				26525C982051219300FE5E20 /* CountCell.swift */,
+				26525C962051215600FE5E20 /* ReactionButtonsCell.swift */,
+				26525CA02056240200FE5E20 /* UserTweetCell.swift */,
+				26525CA220563CE000FE5E20 /* UserRetweetCell.swift */,
+				26525C9A205121AC00FE5E20 /* ReplyDetailCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -367,13 +397,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-twitter_alamofire_demoTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		08A0276EE8AF7CDCC6E754D3 /* [CP] Embed Pods Frameworks */ = {
@@ -442,13 +475,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-twitter_alamofire_demo-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		7022D4CCEFBD1FE1F7645438 /* [CP] Check Pods Manifest.lock */ = {
@@ -457,13 +493,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-twitter_alamofire_demoUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EA162E987D837BDF5DC5369F /* [CP] Copy Pods Resources */ = {
@@ -487,9 +526,22 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-twitter_alamofire_demo/Pods-twitter_alamofire_demo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/DateToolsSwift/DateToolsSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
+				"${BUILT_PRODUCTS_DIR}/OAuthSwift/OAuthSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/OAuthSwiftAlamofire/OAuthSwiftAlamofire.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DateToolsSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainAccess.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OAuthSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OAuthSwiftAlamofire.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -507,9 +559,19 @@
 				ED1D234E1EF71C4B00C51ACC /* TweetCell.swift in Sources */,
 				ED1D23481EF6E37700C51ACC /* Tweet.swift in Sources */,
 				ED1AFD611E94496E00FD4B90 /* LoginViewController.swift in Sources */,
+				263C82782050FF91007718FC /* TweetDetailsViewController.swift in Sources */,
+				26525C992051219300FE5E20 /* CountCell.swift in Sources */,
+				26525CA12056240200FE5E20 /* UserTweetCell.swift in Sources */,
+				26E5779A204A7A3A0067B884 /* RetweetCell.swift in Sources */,
+				26525C9B205121AC00FE5E20 /* ReplyDetailCell.swift in Sources */,
 				ED1AFD5F1E94421000FD4B90 /* APIManager.swift in Sources */,
 				ED1AFD311E942B2500FD4B90 /* AppDelegate.swift in Sources */,
+				26525C972051215600FE5E20 /* ReactionButtonsCell.swift in Sources */,
+				269EB7A920510D9D0021CF76 /* TweetDetailCell.swift in Sources */,
+				26525C9D2053A24000FE5E20 /* ProfileViewController.swift in Sources */,
+				26525C952051211100FE5E20 /* RetweetDetailCell.swift in Sources */,
 				ED1D234C1EF6E42900C51ACC /* TimelineViewController.swift in Sources */,
+				26525CA320563CE000FE5E20 /* UserRetweetCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,25 +7,53 @@
 //
 
 import Foundation
+import DateToolsSwift
 
 class Tweet {
     
     // MARK: Properties
     var id: Int64 // For favoriting, retweeting & replying
     var text: String // Text content of tweet
-    var favoriteCount: Int? // Update favorite count label
-    var favorited: Bool? // Configure favorite button
+    var favoriteCount: Int // Update favorite count label
+    var favorited: Bool // Configure favorite button
     var retweetCount: Int // Update favorite count label
     var retweeted: Bool // Configure retweet button
     var user: User // Contains name, screenname, etc. of tweet author
     var createdAtString: String // Display date
+    var fullDateString: String
+    
+    var retweetedStatus: [String: Any]?
+    
+    var replyTo: String?
+    var replyIds: [Int64]?
     
     // MARK: - Create initializer with dictionary
     init(dictionary: [String: Any]) {
+//        print("%%%%%%%%%%%%%%%%%%%%%%%%%Individual%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%")
+//        print(dictionary)
+//        print("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%")
         id = dictionary["id"] as! Int64
         text = dictionary["text"] as! String
-        favoriteCount = dictionary["favorite_count"] as? Int
-        favorited = dictionary["favorited"] as? Bool
+        
+        if let favCount = dictionary["favorite_count"] as? NSNull{
+            
+            favoriteCount = 0
+        }
+        else{
+            
+             favoriteCount = dictionary["favorite_count"] as! Int
+        }
+        
+        if let isfav =  dictionary["favorited"] as? NSNull{
+            
+            favorited = false
+        }
+        else{
+            
+            favorited = dictionary["favorited"] as! Bool
+        }
+       
+        
         retweetCount = dictionary["retweet_count"] as! Int
         retweeted = dictionary["retweeted"] as! Bool
         
@@ -42,9 +70,22 @@ class Tweet {
         formatter.dateStyle = .short
         formatter.timeStyle = .none
         // Convert Date to String
-        createdAtString = formatter.string(from: date)
-        
+        createdAtString = date.shortTimeAgoSinceNow
+        fullDateString = formatter.string(from: date)
+        retweetedStatus = dictionary["retweeted_status"] as? [String: Any]
+        replyTo = dictionary["in_reply_to_screen_name"] as? String
         
     }
+    
+    static func tweets(with array: [[String: Any]]) -> [Tweet] {
+        var tweets: [Tweet] = []
+        for tweetDictionary in array {
+            let tweet = Tweet(dictionary: tweetDictionary)
+            tweets.append(tweet)
+        }
+        return tweets
+    }
+    
+
 }
 

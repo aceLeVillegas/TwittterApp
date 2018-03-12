@@ -14,6 +14,8 @@ class TimelineViewController: UIViewController, UITableViewDelegate, UITableView
     
     @IBOutlet weak var tableView: UITableView!
     
+    var refreshcontrol: UIRefreshControl!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,16 +23,33 @@ class TimelineViewController: UIViewController, UITableViewDelegate, UITableView
         tableView.delegate = self
         
         tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 100
+        tableView.estimatedRowHeight = 140
+        
+        
+        refreshcontrol = UIRefreshControl()
+        refreshcontrol.addTarget(self, action: #selector(TimelineViewController.loadToRefresh(_:)), for: .valueChanged)
+        tableView.insertSubview(refreshcontrol, at: 0)
+        
+        loadTweets()
+    }
+    
+    func loadTweets(){
         
         APIManager.shared.getHomeTimeLine { (tweets, error) in
             if let tweets = tweets {
                 self.tweets = tweets
                 self.tableView.reloadData()
+                self.refreshcontrol.endRefreshing()
             } else if let error = error {
                 print("Error getting home timeline: " + error.localizedDescription)
             }
         }
+        
+    }
+    
+    @objc func loadToRefresh(_ refreshControl: UIRefreshControl){
+        
+        loadTweets()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -38,11 +57,26 @@ class TimelineViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TweetCell", for: indexPath) as! TweetCell
+//        print("-=-=-=-=-=-=-=-=-==-=-=-==-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=--=-=-==-=-=-")
+//        print(tweets[indexPath.row].text)
+//        print("Retweeted  \(tweets[indexPath.row].retweetedStatus)")
+//        print("-=-=-=-=-=-=-=-=-==-=-=-==-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=--=-=-==-=-=-")
         
-        cell.tweet = tweets[indexPath.row]
+        if (tweets[indexPath.row].retweetedStatus as? [String: Any]) != nil{
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "RetweetCell", for: indexPath) as! RetweetCell
+            
+            cell.tweet = tweets[indexPath.row]
+            return cell
+        }
+        else{
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "TweetCell", for: indexPath) as! TweetCell
+            
+            cell.tweet = tweets[indexPath.row]
+            return cell
+        }
         
-        return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -59,15 +93,20 @@ class TimelineViewController: UIViewController, UITableViewDelegate, UITableView
         APIManager.shared.logout()
     }
     
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destination = segue.destination as! TweetDetailsViewController
+        
+        let cell = sender as! UITableViewCell
+        
+        if let indexPath = tableView.indexPath(for: cell){
+            
+            destination.tweet = tweets[indexPath.row]
+            
+            print("^&^&&^&^&^&^&^&^&^&^&^&^&^&^&&^^&^^&^&^&^&^&^^&^&^&^&^&^^&^&")
+            print(tweets[indexPath.row])
+            print("^&^&&^&^&^&^&^&^&^&^&^&^&^&^&&^^&^^&^&^&^&^&^^&^&^&^&^&^^&^&")
+        }
+    }
+   
     
 }

@@ -25,6 +25,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.window?.rootViewController = loginVC
         }
         
+        if User.current != nil{
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let homeTimelineViewController = storyboard.instantiateViewController(withIdentifier: "loginSegue")
+            window?.rootViewController = homeTimelineViewController
+        }
+        else{
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let loginVC = storyboard.instantiateViewController(withIdentifier: "LoginViewController")
+            self.window?.rootViewController = loginVC
+        }
+        
+        
+        
         return true
     }
     
@@ -33,6 +48,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
         // Handle urlcallback sent from Twitter
         APIManager.shared.handle(url: url)
+        
         return true
     }
     
