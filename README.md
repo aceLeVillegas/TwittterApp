@@ -1,21 +1,21 @@
 # Project 6 - *Name of App Here*
 
-Time spent: **X** hours spent in total
+Time spent: 6 hours spent in total
 
 ## User Stories
 
 The following **required** stories are completed:
 
-- [ ] User can tap on a tweet to view it in a detail view, with controls to retweet, favorite, and reply (2pts)
+- [X] User can tap on a tweet to view it in a detail view, with controls to retweet, favorite, and reply (2pts)
 - [ ] User can compose a new tweet by tapping on a compose button. (3pts)
 - [ ] When composing a tweet, user sees a countdown for the number of characters remaining for the tweet (out of 140) (2pt)
-- [ ] User can view their profile in a *profile tab* (3pts)
+- [X] User can view their profile in a *profile tab* (3pts)
    - Contains the user header view: picture and tagline
    - Contains a section with the users basic stats: # tweets, # following, # followers
 
 The following **stretch** features are implemented:
 
-- [ ] Profile view includes that user's timeline. (2pts)
+- [X] Profile view includes that user's timeline. (2pts)
 - [ ] User can tap the profile image in any tweet to see another user's profile. (1pt)
    - Contains the user header view: picture and tagline.
    - Contains a section with the users basic stats: # tweets, # following, # followers.
@@ -47,7 +47,7 @@ Describe any challenges encountered while building the app.
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright 2018 Sarah Villegas 
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
